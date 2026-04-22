@@ -1,25 +1,12 @@
 import { paperDay, paperNight } from '../theme/colors'
 import { useTheme } from '../context/ThemeContext'
 
-function ThemeToggle() {
-  const { theme, setTheme, isDark } = useTheme()
-
-  return (
-    <button
-      onClick={() => setTheme(isDark ? paperDay : paperNight)}
-      className="text-xs px-2 py-1 rounded-full transition-all hover:scale-105"
-      style={{
-        backgroundColor: theme.bg2,
-        color: theme.muted,
-      }}
-    >
-      {isDark ? '◐' : '◑'}
-    </button>
-  )
-}
-
 export default function Hero() {
-  const { theme } = useTheme()
+  const { theme, isDark, setTheme } = useTheme()
+
+  const toggleTheme = () => {
+    setTheme(isDark ? paperDay : paperNight)
+  }
 
   return (
     <section className="flex flex-col items-center pt-24 pb-16 px-4 text-center">
@@ -67,8 +54,19 @@ export default function Hero() {
         >
           GitHub
         </a>
-        <ThemeToggle />
       </div>
+
+      <button
+        onClick={toggleTheme}
+        className="text-xs px-3 py-1.5 rounded-full transition-all hover:scale-105 mb-6"
+        style={{
+          backgroundColor: theme.bg1,
+          color: theme.muted,
+          border: `1px solid ${theme.bg2}`,
+        }}
+      >
+        {isDark ? '◐ Light mode' : '◑ Dark mode'}
+      </button>
 
       <div className="flex gap-2">
         <span
