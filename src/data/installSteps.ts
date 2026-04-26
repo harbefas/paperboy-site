@@ -30,14 +30,9 @@ export const installTabs: InstallTab[] = [
     label: 'Firefox',
     content: [
       {
-        variantLabel: 'Load temporary extension',
-        linkHref: 'about:debugging',
-        linkLabel: 'about:debugging → This Firefox → Load Temporary Add-on',
-      },
-      {
-        variantLabel: 'Select manifest.json in the repo root',
-        linkHref: 'https://github.com/harbefas/paperboy',
-        linkLabel: 'View on GitHub',
+        variantLabel: 'Install from Firefox Add-ons (recommended)',
+        linkHref: 'https://addons.mozilla.org/en-US/firefox/addon/paperboy/',
+        linkLabel: 'Add to Firefox',
       },
     ],
   },

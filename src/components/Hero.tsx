@@ -35,11 +35,24 @@ export default function Hero() {
 
       <div className="flex gap-4 mb-8">
         <a
-          href="#install"
+          href="https://addons.mozilla.org/en-US/firefox/addon/paperboy/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
           style={{ backgroundColor: theme.accent, color: theme.bg }}
         >
-          Install
+          Add to Firefox
+        </a>
+        <a
+          href="#install"
+          className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
+          style={{
+            backgroundColor: theme.bg1,
+            color: theme.fg,
+            border: `1px solid ${theme.bg2}`,
+          }}
+        >
+          Other installs
         </a>
         <a
           href="https://github.com/harbefas/paperboy"
